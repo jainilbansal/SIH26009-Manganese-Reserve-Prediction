@@ -147,7 +147,7 @@ with col1:
     m = folium.Map(location=[21.8, 80.18], zoom_start=11, tiles="CartoDB dark_matter")
 
     if show_heat and grid:
-        cm = LinearColormap(["blue", "cyan", "yellow", "orange", "red"], 0, 1)
+        cm = LinearColormap(["blue", "cyan", "yellow", "orange", "red"], vmin=0, vmax=1)
         for cell in grid:
             if cell["score"] > 0.3:
                 folium.CircleMarker(
